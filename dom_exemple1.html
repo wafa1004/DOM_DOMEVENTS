@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Events</title>
+</head>
+<body>
+
+<!-- option1-->
+
+<div class ="jumbotron text-center">
+    <button class="btn btn-danger" onclick="goCoccoo()">
+        Go Coccoo
+    </button>
+</div>
+
+<!-- option2-->
+
+<div class ="jumbotron text-center">
+    <button class="btn btn-danger coffee-btn" onclick="goCoccoo()">
+        Go coffee
+    </button>
+</div>
+
+<div class ="jumbotron text-center">
+    <button class="btn btn-danger coffee-btn1" onclick="goCoccoo()">
+        Go coffee
+    </button>
+</div>
+
+<div class ="jumbotron text-center">
+    <button class="btn btn-danger coffee-btn2" onclick="goCoccoo()">
+        Go coffee
+    </button>
+</div>
+
+<!-- option1-->
+
+<script>
+
+    function goCoccoo() {
+        document.body.style.backgroundColor = '#C00C00';
+    }
+
+    <!-- option2-->
+      const coffeeButton = document.querySelectorAll(".coffee-btn");
+//    coffeeButton.onclick = function () {
+//        document.body.style.backgroundColor= '#C0FFEE';
+//    }
+//
+//    coffeeButton.onmouseenter = goCoccoo();
+    function getCoffee(){
+        document.body.style.backgroundColor = '#C0FFEE';
+    }
+
+    coffeeButton.forEach(function(button){
+        button.onclick = getCoffee;
+
+    });
+</script>
+
+
+</body>
+</html>
